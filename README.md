@@ -6,3 +6,6 @@ to work with my arduino Uno. The test sketch "button test" details how to connec
 work. This basic idea will be replicated to attach numerous buttons to the arduino. Next will be setting each button input to correspond to a different audio output.
 
 The tone test code is meant to test out connecting a speaker to pin 9 to test audio output independent of input. The values for tone outputs are based on the infromation from https://www.arduino.cc/en/Tutorial/toneMelody where different notes are defined by different values. Next will be testing making a song from these notes and connecting them to inputs (the buttons).
+
+Using an external microsd card connection such as this: https://www.amazon.ca/Reader-SODIAL-Memory-Shield-Arduino/dp/B00YMJVLAS/ref=sr_1_1?ie=UTF8&qid=1477611127&sr=8-1&keywords=arduino+micro+sd
+and existing libraries for external audio playback it may be possible to play .wav files from the sd card upon a button press to expand the range of sounds the device can produce.
