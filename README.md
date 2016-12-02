@@ -1,13 +1,18 @@
 # CS-207-Final-Project
 Everything pertaining to my final project, a button controlled interactive instrument.
 
-Currently I am working on testing and setting up the basics. Right now that involves setting up the microswitches and arcade buttons
-to work with my arduino Uno. The test sketch "button test" details how to connect two microswitches to the arduino and verify that they
-work. This basic idea will be replicated to attach numerous buttons to the arduino. Next will be setting each button input to correspond to a different audio output.
+I have completed a basic version of this project implementing a set of 8 arcade buttons, the  tone function, and a basic speaker.
+It involved soldering a set of 3 wires to each microswitch to connect them to the arduino. The picture below demonstrates how the wires should be connected:
+![alt tag] (https://github.com/Jonahw21/CS-207-Final-Project/blob/master/img/microswitch-arduino.png)
 
-The tone test code is meant to test out connecting a speaker to pin 9 to test audio output independent of input. The values for tone outputs are based on the infromation from https://www.arduino.cc/en/Tutorial/toneMelody where different notes are defined by different values. Next will be testing making a song from these notes and connecting them to inputs (the buttons).
+As seen above a 5v connection is attached to the common connection on the microswitch. The normally open connection is then directly attached to the input pin on the arduino and a resistor going to ground. This sends a high voltage to the arduino when the switch is closed by pressing the button. The button_test sketch in the testing folder can be used to test that your button has been properly wire and is working.
 
-Using an external microsd card connection such as this: https://www.amazon.ca/Reader-SODIAL-Memory-Shield-Arduino/dp/B00YMJVLAS/ref=sr_1_1?ie=UTF8&qid=1477611127&sr=8-1&keywords=arduino+micro+sd
-and existing libraries for external audio playback it may be possible to play .wav files from the sd card upon a button press to expand the range of sounds the device can produce. Using a string an audio file from the sd card can be found and played. A non-piezo speaker should also be wired to the arduino for this method.
+The tone test code is meant to test out connecting a speaker to pin 9 to test audio output independent of input. The values for tone outputs are based on the infromation from https://www.arduino.cc/en/Tutorial/toneMelody where different notes are defined by different values. This can be used to ensure your speaker is properly connected and to test different tones.
 
-An expansion upon the external sd card audio source could be to have an array containing a variety of sounds grouped together. Then a button on the instrument could control an offset variable that shifts down the array to load another set of audio files. This would allow the device to change its audio playback while in use without reprogramming.
+Unfortunately I was unable to get an SD card module working with my project. I will go into further detail on what I had planned to do later. First I will discuss what I wound up with. The final build ended up looking like this:
+![alt tag](https://github.com/Jonahw21/CS-207-Final-Project/blob/master/img/project%20Circuit%20diagram.JPG)
+It uses an array to hold values of tones to be played. One of the buttons controls an offset variable which affects what values are read from the array allowing you to change the sounds the device on the fly. The other seven buttons each play a different sound when held, allowing you to determine the length of the note.
+
+Regarding the sd card I had planned to use an external microsd card connection such as this: https://www.amazon.ca/Reader-SODIAL-Memory-Shield-Arduino/dp/B00YMJVLAS/ref=sr_1_1?ie=UTF8&qid=1477611127&sr=8-1&keywords=arduino+micro+sd
+and existing libraries for external audio playback. Playback of .wav files should theoretically be possible with both the sd library and the TMRpcm library. These files are played from an sd card by passing in the name of the .wav file on the card. As such an array holding the names of several files and an offset variable could allow for several sound sets to be switched between just like the basic build of my project. Using this the plan was to use recordings of real instruments that could be played at the push of a button. Using .wav files for the up and down strums of a guitar chord would allow someone to make strumming patterns withouth needing to learning complex chord positions. The main idea was to simplify complex instruments down to single button presses.
+
