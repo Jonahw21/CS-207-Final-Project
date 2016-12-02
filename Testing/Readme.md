@@ -6,3 +6,5 @@ The ode_to_joy file contains a program that play a tune to test out the tones an
 The Arcade_button_test program is meant to use the serial output to verify that a button is properly wired and functioning.
 
 The Tone_testing program is meant to test a range of values for the tone function to produce specific notes.
+
+Final_build_simple_sounds is the program containing a working version of this project with the basic tone function.
