@@ -2,8 +2,9 @@
 Everything pertaining to my final project, a button controlled interactive instrument.
 
 I have completed a basic version of this project implementing a set of 8 arcade buttons, the  tone function, and a basic speaker.
-It involved soldering a set of 3 wires to each microswitch to connect them to the arduino. The picture below demonstrates how the wires should be connected:
-![alt tag] (https://github.com/Jonahw21/CS-207-Final-Project/blob/master/img/microswitch-arduino.png)
+It produces a note while one of the buttons are held done allowing for simple melodies. Due to technical difficulties I was not able to finish what I had intended but have managed to build this much simpler version.
+
+
 
 # Repository Contents
 *  **/Testing** - Contains sketches that can be used to verify the project works at various stages.
@@ -22,6 +23,9 @@ Attempts at the .wav playback will also require an SD card module and a non-piez
 The SD and TMRpcm libraries are used for .wav file playback
 
 ## Build Details
+
+The largest part of this project involved soldering a set of 3 wires to each microswitch to connect them to the arduino. This has to be done for each switch so with 8 buttons in total there will be 24 wires, which can make things a bit messy. The picture below demonstrates how the wires should be connected:
+![alt tag] (https://github.com/Jonahw21/CS-207-Final-Project/blob/master/img/microswitch-arduino.png)
 
 As seen above a 5v connection is attached to the common connection on the microswitch. The normally open connection is then directly attached to the input pin on the arduino and a resistor going to ground. This sends a high voltage to the arduino when the switch is closed by pressing the button. The button_test sketch in the testing folder can be used to test that your button has been properly wire and is working.
 
