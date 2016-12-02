@@ -11,6 +11,17 @@ It involved soldering a set of 3 wires to each microswitch to connect them to th
 *  **/img** - Contains images of the project and its wiring.
 
 # Requirements and Materials
+The basic version of this project requires :
+* An arduino Uno
+* 8 buttons or switches
+* 8 560ohm resistors
+* a speaker
+* 10k resistor if using a piezo speaker
+
+Attempts at the .wav playback will also require an SD card module and a non-piezo speaker
+The SD and TMRpcm libraries are used for .wav file playback
+
+## Build Details
 
 As seen above a 5v connection is attached to the common connection on the microswitch. The normally open connection is then directly attached to the input pin on the arduino and a resistor going to ground. This sends a high voltage to the arduino when the switch is closed by pressing the button. The button_test sketch in the testing folder can be used to test that your button has been properly wire and is working.
 
