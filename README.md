@@ -5,6 +5,13 @@ I have completed a basic version of this project implementing a set of 8 arcade 
 It involved soldering a set of 3 wires to each microswitch to connect them to the arduino. The picture below demonstrates how the wires should be connected:
 ![alt tag] (https://github.com/Jonahw21/CS-207-Final-Project/blob/master/img/microswitch-arduino.png)
 
+# Repository Contents
+*  **/Testing** - Contains sketches that can be used to verify the project works at various stages.
+*  **/build** - Contains the final build sketch of my "completed" project.
+*  **/img** - Contains images of the project and its wiring.
+
+# Requirements and Materials
+
 As seen above a 5v connection is attached to the common connection on the microswitch. The normally open connection is then directly attached to the input pin on the arduino and a resistor going to ground. This sends a high voltage to the arduino when the switch is closed by pressing the button. The button_test sketch in the testing folder can be used to test that your button has been properly wire and is working.
 
 The tone test code is meant to test out connecting a speaker to pin 9 to test audio output independent of input. The values for tone outputs are based on the infromation from https://www.arduino.cc/en/Tutorial/toneMelody where different notes are defined by different values. This can be used to ensure your speaker is properly connected and to test different tones.
