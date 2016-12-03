@@ -10,6 +10,7 @@ It produces a note while one of the buttons are held done allowing for simple me
 *  **/Testing** - Contains sketches that can be used to verify the project works at various stages.
 *  **/build** - Contains the final build sketch of my "completed" project.
 *  **/img** - Contains images of the project and its wiring.
+*  **/sound** - Contains the .wav files to be put on the SD card.
 
 # Requirements and Materials
 The basic version of this project requires :
