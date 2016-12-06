@@ -8,3 +8,5 @@ The Arcade_button_test program is meant to use the serial output to verify that 
 The Tone_testing program is meant to test a range of values for the tone function to produce specific notes.
 
 Final_build_simple_sounds is the program containing a working version of this project with the basic tone function.
+
+wav_test is a sketch designed to test audio playback. It requires a speaker and an sd card of some type.
